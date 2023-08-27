@@ -4,6 +4,7 @@ def first_non_repeated(s: str) -> str:
 
     for char in s:
         print(char_count)
+
         char_count[char] = char_count.get(char, 0) + 1
     for char in s:
         if char_count[char] == 1:
