@@ -1,0 +1,21 @@
+
+def merge_sorted_lists(a: list, b: list) -> list:
+    merged = []
+    i, j = 0, 0
+    while i < len(a) and j < len(b):
+        # Compare elements from the two lists
+        if a[i] <= b[j]:
+            merged.append(a[i])
+            i += 1
+        else:
+            merged.append(b[j])
+            j += 1
+    # Append remaining elements
+    while i < len(a):
+        merged.append(a[i])
+        i += 1
+    while j < len(b):
+        merged.append(b[j])
+        j += 1
+    return merged
+
